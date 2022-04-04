@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Get the token from Travis environment vars and build the bot URL:
-BOT_URL="https://api.telegram.org/bot${5047800489:AAFTV5dPCxNF0iG3FG1BwNKLrPILscwTIbI}/sendMessage"
+BOT_URL="https://api.telegram.org/bot5047800489:AAFTV5dPCxNF0iG3FG1BwNKLrPILscwTIbI/sendMessage"
 
 # Set formatting for the message. Can be either "Markdown" or "HTML"
 PARSE_MODE="Markdown"
@@ -16,7 +16,7 @@ fi
 # Define send message function. parse_mode can be changed to
 # HTML, depending on how you want to format your message:
 send_msg () {
-    curl -s -X POST ${BOT_URL} -d chat_id=$5185581811 \
+    curl -s -X POST ${BOT_URL} -d chat_id=5185581811 \
         -d text="$1" -d parse_mode=${PARSE_MODE}
 }
 
